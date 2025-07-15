@@ -1,26 +1,43 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F5F5;
+  --primary: #4AC3B7;
+  --secondary: #FF6B6B;
+  --text-primary: #333333;
+  --text-secondary: #A2A2A2;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-cursor--hover {
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary);
+  opacity: 0.7;
 }
