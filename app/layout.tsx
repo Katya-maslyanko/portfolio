@@ -1,24 +1,28 @@
-import "./globals.css";
-import { Manrope } from "next/font/google";
+"use client";
 
-const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "700"],
-  variable: "--font-manrope",
-});
+import './globals.css';
+import { Manrope } from 'next/font/google';
+import Loading from './loading';
+import CustomCursor from '../components/CustomCursor';
+import { useState } from 'react';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const manrope = Manrope({ subsets: ['latin', 'cyrillic'], weight: ['400', '500', '600', '700'] });
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <html lang="ru">
       <head>
-        <title>Kat_masl</title>
-        <meta name="description" content="Портфолио Екатерины Маслянко - UX/UI Дизайнер и Frontend Разработчик" />
+        <title>Екатерина Масоянко - Портфолио</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Портфолио Екатерины Масоянко - UX/UI дизайнер и веб-разработчик" />
       </head>
-      <body className={`${manrope.variable} font-sans`}>{children}</body>
+      <body className={manrope.className}>
+        <CustomCursor />
+        <Loading isLoading={isLoading} setIsLoading={setIsLoading} />
+        {!isLoading && children}
+      </body>
     </html>
   );
 }

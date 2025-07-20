@@ -1,43 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #F5F5F5;
-  --primary: #4AC3B7;
-  --secondary: #FF6B6B;
-  --text-primary: #333333;
-  --text-secondary: #A2A2A2;
+.section-header {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.section-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #d1d5db;
+}
+
+.overlay-text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+aside a,
+aside p {
+  max-width: fit-content;
+}
+
+aside a {
+  transition: color 0.2s ease;
+}
+
+aside a:hover {
+  color: #4c4fff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4c4fff;
+  text-decoration: none;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text-primary);
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22.5px;
+  letter-spacing: -0.141px;
+  color: #000;
 }
 
-/* Custom cursor styles */
+aside li {
+  position: relative;
+}
+
+aside li a {
+  position: relative;
+  display: block;
+}
+
+aside li a span {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  background-color: #4c4fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+aside li a:hover span {
+  transform: scaleX(1);
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #000;
+  font-size: 13px;
+}
+
+.main-content {
+  margin-left: 0;
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    margin-left: 344px;
+    padding-top: 42px;
+  }
+  .sidebar {
+    width: 324px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 639px) {
+  .main-content {
+    margin-left: 0;
+    padding-top: 0;
+  }
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+  html, body {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
+  }
+}
+
+.skill-block {
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .skill-block {
+    max-width: 342px;
+  }
+}
+
+h1 {
+  margin: 0;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+ul {
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.tg-link {
+  position: relative;
+  display: inline-block;
+  color: #4C4FFF;
+  text-decoration: none;
+}
+
+.tg-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #4C4FFF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.tg-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@keyframes expandCursor {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+    background-color: #4c4fff;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(50);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(100);
+    opacity: 0;
+  }
+}
+
 .custom-cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  transition: width 100ms ease-out, height 100ms ease-out;
 }
 
-.custom-cursor--hover {
+.cursor-expand {
+  animation: cursorExpand 300ms forwards;
+}
+
+@keyframes cursorExpand {
+  0% {
+    width: 15px;
+    height: 15px;
+  }
+  50% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
+
+.custom-cursor.cursor-hover {
   width: 40px;
   height: 40px;
-  background-color: var(--secondary);
-  opacity: 0.7;
+}
+
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  opacity: 0.5;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center;
+  transition: transform 0.8s ease-in-out;
+}
+
+.footer-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-link span {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 4px;
+  background-color: #4c4fff;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+  z-index: 10;
+}
+
+.footer-link:hover span {
+  transform: scaleX(1);
+}
+
+header {
+  z-index: 9999;
+}
+
+.header-link {
+  position: relative;
+  display: inline-block;
+  color: #4C4FFF;
+  text-decoration: none;
+}
+
+.header-link span {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #4C4FFF;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.header-link:hover span {
+  transform: scaleX(1);
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease;
+}
+
+.transition-opacity:hover {
+  opacity: 0.9;
+}
+
+aside {
+  z-index: 20;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 16px; /* Уменьшение отступов для мобильных */
+}
+h1 {
+  font-size: 24px; /* Увеличение шрифта для заголовков */
+}
+p {
+  font-size: 14px; /* Уменьшение шрифта для параграфов */
 }
