@@ -23,9 +23,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
   }, []);
 
   return (
-    <aside
-      className={`fixed top-0 left-0 w-[324px] h-screen text-[13px] text-black p-4 flex flex-col ${className}`}
-    >
+<aside
+  className={`w-full md:fixed md:top-0 md:left-0 md:w-[324px] md:h-screen text-[13px] text-black p-4 flex flex-col ${className}`}
+>
+
       <div className="mb-6">
         <div>
           <Link
