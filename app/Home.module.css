@@ -1,0 +1,27 @@
+/* Home.module.css */
+
+.container {
+  margin-left: 0;
+  padding: 20px 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-left: 344px;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    width: 324px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+}
