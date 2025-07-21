@@ -5,7 +5,7 @@ import ProjectLayout from "@/components/ProjectLayout";
 import Link from "next/link";
 import Headerproject from "@/components/Headerproject";
 
-export default function ProjectPage({ params }: { params: { projectId: string } }) {
+export default function ProjectPage( ) {
   return (
     <div className="relative max-w-[1440px] mx-auto px-[24px] flex flex-col min-h-screen">
       <Headerproject />

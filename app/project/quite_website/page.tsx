@@ -5,7 +5,7 @@ import Sidebarproject from "@/components/Sidebarproject_1";
 import ProjectLayout from "@/components/ProjectLayout_1";
 import Link from "next/link";
 
-export default function ProjectPage({ params }: { params: { projectId: string } }) {
+export default function ProjectPage() {
   return (
     <div className="relative max-w-[1440px] mx-auto px-[24px] flex flex-col min-h-screen">
       <Headerproject />
