@@ -16,7 +16,7 @@ export default function ProjectPage({ params }: { params: { projectId: string } 
         <ProjectLayout />
       </div>
       {/* Footer */}
-      <footer className="relative w-full mt-[40px] md:mt-[18px] md:pb-[18px] pb-[40px]" style={{ backgroundColor: "#fff" }}>
+      <footer className="relative w-full mt-[40px] md:mt-[18px] md:pb-[18px] pb-[40px]" style={{ backgroundColor: "#fff", zIndex: 20 }}>
         <span className="block w-full h-[0.5px] bg-[#A2A2A2] mb-[18px]" />
         <div className="flex pr_flex flex-row md:flex-col justify-between items-start">
           <div className="w-[324px]">

@@ -10,18 +10,16 @@ export default function ProjectPage({ params }: { params: { projectId: string } 
     <div className="relative max-w-[1440px] mx-auto px-[24px] flex flex-col min-h-screen">
       <Headerproject />
       {/* Sidebar */}
-      <Sidebarproject className="sidebar w-full z-10 py-[20px]" />
+      <Sidebarproject className="sidebar w-full z-10 py-[20px] md:fixed md:h-full" />
 
       {/* Main Content */}
-      <div className="md:flex-1 content_pr relative">
+      <div className="md:flex-1 content_pr relative md:ml-[324px]">
         <ProjectLayout />
       </div>
 
       {/* Footer */}
-      <footer className="relative w-full mt-[40px] md:mt-[18px] md:pb-[18px] pb-[40px]" style={{ backgroundColor: "#fff" }}>
-        <span
-          className="block w-full h-[0.5px] bg-[#A2A2A2] mb-[18px]"
-        />
+      <footer className="relative w-full mt-[40px] md:mt-[18px] md:pb-[18px] pb-[40px]" style={{ backgroundColor: "#fff", zIndex: 20 }}>
+        <span className="block w-full h-[0.5px] bg-[#A2A2A2] mb-[18px]" />
         <div className="flex pr_flex flex-row md:flex-col justify-between items-start">
           <div className="w-[324px]">
             <Link

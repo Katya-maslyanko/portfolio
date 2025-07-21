@@ -40,5 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-echo "public/videos/*.mp4" >> .gitignore
-public/videos/*.mp4
+echo "!public/videos/*.mp4" >> .gitignore
+git add .gitignore
+git commit -m "Update .gitignore to allow video files"

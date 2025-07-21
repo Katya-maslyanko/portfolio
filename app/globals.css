@@ -228,6 +228,9 @@ p {
   transform: scaleX(1);
 }
 
+.footer{
+  background-color: #FFFFFF;
+}
 header {
   z-index: 9999;
 }
