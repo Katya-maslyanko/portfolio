@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function ProjectLayout() {
   return (
-    <div className="pb-[40px] relative z-[1]">
+    <div className="pb-[40px] projcetlayout relative z-[1]">
       {/* Grid Container */}
-      <div className="grid grid-cols-3 gap-[18px]">
+      <div className="grid grid-cols-3 grid_facts md:gap-[8px]">
         {/* First Section: Full-width Image */}
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <Image

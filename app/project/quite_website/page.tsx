@@ -7,18 +7,18 @@ import Link from "next/link";
 
 export default function ProjectPage({ params }: { params: { projectId: string } }) {
   return (
-    <div className="relative max-w-[1440px] mx-auto px-[24px]">
+    <div className="relative max-w-[1440px] mx-auto px-[24px] flex flex-col min-h-screen">
       <Headerproject />
       {/* Sidebar */}
-      <Sidebarproject className="fixed top-0 left-0 w-[324px] z-10 py-[20px]" />
+      <Sidebarproject className="sidebar w-full z-10 py-[20px]" />
       {/* Main Content */}
-      <div className="ml-[344px] relative pt-[80px] min-h-[100vh]">
+      <div className="md:flex-1 content_pr relative">
         <ProjectLayout />
       </div>
       {/* Footer */}
-      <footer className="relative w-full mt-[40px] pb-[40px] z-[20]" style={{ backgroundColor: "#fff" }}>
+      <footer className="relative w-full mt-[40px] md:mt-[18px] md:pb-[18px] pb-[40px]" style={{ backgroundColor: "#fff" }}>
         <span className="block w-full h-[0.5px] bg-[#A2A2A2] mb-[18px]" />
-        <div className="flex justify-between items-start">
+        <div className="flex pr_flex flex-row md:flex-col justify-between items-start">
           <div className="w-[324px]">
             <Link
               href="/"
@@ -28,7 +28,7 @@ export default function ProjectPage({ params }: { params: { projectId: string } 
               Назад к проектам
             </Link>
           </div>
-          <div className="flex-1 col-span-2 max-w-[calc(100%-344px)]">
+          <div className="flex-1 mt-[4px]">
             <h2 className="text-blue-600 text-[14px] mt-[0px] font-[400] mb-[8px]">
               Результат проекта
             </h2>

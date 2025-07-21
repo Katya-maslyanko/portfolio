@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Headerproject({ className }: { className?: string }) {
   return (
-    <header className="fixed top-0 left-[364px] right-[24px] bg-white z-[9999] h-[42px] pt-[20px]" style={{zIndex: 10000, backgroundColor: "#fff"}}>
+    <header className="fixed top-0 left-[364px] right-[24px] bg-white z-[9999] h-[42px] pt-[20px] header_none" style={{zIndex: 10000, backgroundColor: "#fff"}}>
       <div className="py-4 flex justify-end items-end relative">
         <Link
           href="/"

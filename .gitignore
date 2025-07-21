@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+echo "public/videos/*.mp4" >> .gitignore
+public/videos/*.mp4

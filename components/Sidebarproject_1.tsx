@@ -25,9 +25,9 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
 
   return (
     <aside
-      className={`fixed top-0 left-0 w-[324px] h-screen text-[13px] text-black p-4 flex flex-col ${className}`}
+      className={`fixed top-0 left-0 w-[324px] text-[13px] text-black p-4 flex flex-col ${className}`}
     >
-      <div className="mb-6">
+      <div>
         <div>
           <Link
             href="/"
@@ -35,10 +35,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
           >
             Екатерина Маслянко
           </Link>
-              <span
-                className="block w-full h-[0.5px] bg-gray-300"
-                style={{ backgroundColor: "#A2A2A2" }}
-              />
+          <span
+            className="block w-full h-[0.5px] bg-gray-300"
+            style={{ backgroundColor: "#A2A2A2" }}
+          />
         </div>
         <div className="flex-shrink-0 mt-[18px]">
           <div className="flex items-center space-x-4">
@@ -67,15 +67,15 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
             <p className="mt-[4px] text-gray-700 text-[13px]">
               Создание лендинга для продажи беспилотников и услуг компании.
             </p>
-            <span className="mt-[4px] text-blue-600 text-[13px] block" style={{ color: "#4C4FFF" }}>
+            <span className="mt-[4px] text-blue-600 text-[13px] block mb-[18px]" style={{ color: "#4C4FFF" }}>
               UX/UI &gt;&gt; Лендинг
             </span>
           </div>
         </div>
-              <span
-                className="block w-full h-[0.5px] bg-gray-300"
-                style={{ backgroundColor: "#A2A2A2" }}
-              />
+        <span
+          className="block w-full h-[0.5px] bg-gray-300"
+          style={{ backgroundColor: "#A2A2A2" }}
+        />
         <div className="flex-grow overflow-y-auto mt-[18px]">
           <div className="mt-4">
             <h2 className="mb-[4px] text-gray-700 text-[14px] font-[400] hover:text-[#4C4FFF] transition-colors duration-300">
