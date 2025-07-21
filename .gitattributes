@@ -1,1 +1,12 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/reo_video_projects.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/quite_main_video.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/quite_video_cataloog.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/quite_video_service.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/reo_video.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/task_video_dashboard.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/task_video_detail_task.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/task_video_map.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/task_video_project.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/video_reo.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/video_task.mp4 filter=lfs diff=lfs merge=lfs -text
