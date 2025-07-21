@@ -49,7 +49,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <video
-            src="/videos/reo_video.mov"
+            src="/videos/reo_video.mp4"
             autoPlay
             loop
             muted
@@ -63,7 +63,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <video
-            src="/videos/reo_video_projects.mov"
+            src="/videos/reo_video_projects.mp4"
             autoPlay
             loop
             muted

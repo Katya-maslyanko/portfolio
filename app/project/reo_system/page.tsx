@@ -10,7 +10,7 @@ export default function ProjectPage({ params }: { params: { projectId: string } 
     <div className="relative max-w-[1440px] mx-auto px-[24px]">
       <Headerproject />
       {/* Sidebar */}
-      <Sidebarproject className="fixed top-0 left-0 w-[324px] z-10 py-[20px]" />
+      <Sidebarproject className="sidebar fixed top-0 left-0 w-[324px] z-10 py-[20px]" />
       {/* Main Content */}
       <div className="ml-[344px] relative pt-[80px]">
         <ProjectLayout />

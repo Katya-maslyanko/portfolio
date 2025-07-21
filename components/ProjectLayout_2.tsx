@@ -54,7 +54,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <video
-            src="/videos/task_video_dashboard.mov"
+            src="/videos/task_video_dashboard.mp4"
             autoPlay
             loop
             muted
@@ -68,7 +68,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[15/9] z-[0]">
           <video
-            src="/videos/task_video_project.mov"
+            src="/videos/task_video_project.mp4"
             autoPlay
             loop
             muted
@@ -92,7 +92,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/16] z-[0]">
           <video
-            src="/videos/task_video_detail_task.mov"
+            src="/videos/task_video_detail_task.mp4"
             autoPlay
             loop
             muted
@@ -110,7 +110,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <video
-            src="/videos/task_video_map.mov"
+            src="/videos/task_video_map.mp4"
             autoPlay
             loop
             muted

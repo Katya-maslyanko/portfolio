@@ -11,23 +11,23 @@ export default function Home() {
   return (
     <div className="relative max-w-[1440px] mx-auto px-[24px] py-[20px] flex flex-col">
       {/* Sidebar сверху на мобилке */}
-      <Sidebar className="mb-10 md:mb-0" />
+      <Sidebar className="sidebar" />
 
       {/* Основной контент */}
-      <div className="md:ml-[344px]">
+      <div className="main-content">
         <Skills />
 
-        <div className="mt-[52px]">
+        <div className="mt-[52px] portfolio-mt">
           <PortfolioGrid />
         </div>
 
-        <div className="mt-[52px]">
+        <div className="mt-[52px] portfolio-mt">
           <FadeInWhenVisible>
             <Facts />
           </FadeInWhenVisible>
         </div>
 
-        <div className="mt-[52px]">
+        <div className="mt-[52px] portfolio-mt">
           <FadeInWhenVisible>
             <Footer />
           </FadeInWhenVisible>

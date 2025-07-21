@@ -55,7 +55,7 @@ const Skills = () => {
 
   return (
     <div>
-      <div className="flex flex-row gap-[20px]"> {/* Устанавливаем gap на 20px */}
+      <div className="skill"> {/* Устанавливаем gap на 20px */}
         {skillsData.map((skill) => (
           <div key={skill.title} className="flex-1">
             {/* Заголовок с линией */}
@@ -63,8 +63,8 @@ const Skills = () => {
               <h1 className="text-gray-700 text-[16px] font-bold pb-[18px]">
                 {skill.title}
               </h1>
-             <span
-                className="block w-full h-[0.5px] bg-gray-300" 
+              <span
+                className="block w-full h-[0.5px] bg-gray-300"
                 style={{ backgroundColor: "#A2A2A2" }}
               />
             </div>

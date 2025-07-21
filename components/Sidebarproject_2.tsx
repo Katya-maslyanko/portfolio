@@ -35,10 +35,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
           >
             Екатерина Маслянко
           </Link>
-          <span
-            className="absolute bottom-0 left-0 w-full h-[0.5px]"
-            style={{ backgroundColor: "#A2A2A2" }}
-          />
+              <span
+                className="block w-full h-[0.5px] bg-gray-300"
+                style={{ backgroundColor: "#A2A2A2" }}
+              />
         </div>
         <div className="flex-shrink-0 mt-[18px]">
           <div className="flex items-center space-x-4">
@@ -72,10 +72,10 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
             </span>
           </div>
         </div>
-        <span
-          className="absolute mt-[18px] left-0 w-full h-[0.5px]"
-          style={{ backgroundColor: "#A2A2A2" }}
-        />
+              <span
+                className="block w-full h-[0.5px] bg-gray-300"
+                style={{ backgroundColor: "#A2A2A2" }}
+              />
         <div className="flex-grow overflow-y-auto mt-[18px]">
           <div className="mt-4">
             <h2 className="mb-[4px] text-gray-700 text-[14px] font-[400] hover:text-[#4C4FFF] transition-colors duration-300">

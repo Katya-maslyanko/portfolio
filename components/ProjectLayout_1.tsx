@@ -36,7 +36,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[16/9] z-[0]">
           <video
-            src="/videos/quite_main_video.mov"
+            src="/videos/quite_main_video.mp4"
             autoPlay
             loop
             muted
@@ -49,7 +49,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[15/9] z-[0]">
           <video
-            src="/videos/quite_video_service.mov"
+            src="/videos/quite_video_service.mp4"
             autoPlay
             loop
             muted
@@ -63,7 +63,7 @@ export default function ProjectLayout() {
         </div>
         <div className="col-span-3 relative w-full aspect-[15/9] z-[0]">
           <video
-            src="/videos/quite_video_cataloog.mov"
+            src="/videos/quite_video_cataloog.mp4"
             autoPlay
             loop
             muted
