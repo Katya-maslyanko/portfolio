@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru">
       <head>
-        <title>Екатерина Масоянко - Портфолио</title>
+        <title>Екатерина Маслянко - Портфолио</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Портфолио Екатерины Масоянко - UX/UI дизайнер и веб-разработчик" />
       </head>
