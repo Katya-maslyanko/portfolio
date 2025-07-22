@@ -7,25 +7,8 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [cursorColor, setCursorColor] = useState('#666666');
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Определяем, является ли устройство мобильным
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize(); // Проверяем при первом рендере
-    window.addEventListener('resize', handleResize); // Добавляем слушатель события изменения размера
-
-    return () => {
-      window.removeEventListener('resize', handleResize); // Убираем слушатель при размонтировании
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isMobile) return; // Если мобильное устройство, не инициализируем курсор
-
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -76,7 +59,7 @@ export default function CustomCursor() {
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
-  }, [isMobile]);
+  }, []);
 
   const cursorVariants = {
     default: {
@@ -93,11 +76,9 @@ export default function CustomCursor() {
     },
   };
 
-  if (isMobile) return null; // Не рендерим курсор на мобильных устройствах
-
   return (
     <motion.div
-      className="fixed pointer-events-none rounded-full z-[9999] bg-[#666666]"
+      className="custom-cursor fixed pointer-events-none rounded-full z-[9999] bg-[#666666]"
       style={{
         left: position.x,
         top: position.y,

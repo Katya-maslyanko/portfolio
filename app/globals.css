@@ -351,6 +351,13 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+
 .contact{
   margin-bottom: 0px;
   max-width: 100%;
