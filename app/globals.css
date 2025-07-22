@@ -334,10 +334,14 @@ p {
   }
 }
 
-.skill {
-    display: flex;
-    flex-direction: column;
-}
+  .skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* Два столбца для десктопной версии */
+  }
+  .skill > div:nth-child(3) {
+    grid-column: 1 / -1; /* Третий элемент занимает всю ширину */
+  }
 
 @media (min-width: 768px) {
   .skill {

@@ -40,6 +40,7 @@ export default function ProjectLayout() {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover duration-300"
           />
         </div>
@@ -53,6 +54,7 @@ export default function ProjectLayout() {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover duration-300"
           />
         </div>
@@ -67,6 +69,7 @@ export default function ProjectLayout() {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover duration-300"
           />
         </div>

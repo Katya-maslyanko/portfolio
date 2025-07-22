@@ -43,6 +43,7 @@ const PortfolioGrid = () => {
             autoPlay
             loop
             muted
+            playsInline
             className="w-full h-full object-cover transition-opacity duration-300"
           />
         </div>
@@ -221,6 +222,7 @@ const PortfolioGrid = () => {
               autoPlay
               loop
               muted
+              playsInline
               className="w-full h-full object-cover transition-opacity duration-300"
             />
           </div>

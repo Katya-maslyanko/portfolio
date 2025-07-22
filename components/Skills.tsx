@@ -1,5 +1,3 @@
-"use client";
-
 const Skills = () => {
   const skillsData = [
     {
@@ -25,14 +23,15 @@ const Skills = () => {
           <br />
           <br />
           <span className="block mb-[12px]">
-            Оптимизацию загрузки страниц и интеграцию с API, сохраняя чистоту и масштабируемость кода. Мой процесс включает тесное сотрудничество с дизайнерами и бэкендом для создания целостного продукта.          </span>
+            Оптимизацию загрузки страниц и интеграцию с API, сохраняя чистоту и масштабируемость кода. Мой процесс включает тесное сотрудничество с дизайнерами и бэкендом для создания целостного продукта.          
+          </span>
         </>
       )
     },
     {
       title: "Опыт работы",
       subtitle: "1 Год и 3 Месяца",
-            items: [
+      items: [
         {
           company: "Фриланс, проект совместно с ГК «Геоскан»",
           duration: "Сент 2023 - Фев 2024"
@@ -55,10 +54,9 @@ const Skills = () => {
 
   return (
     <div>
-      <div className="skill"> {/* Устанавливаем gap на 20px */}
+      <div className="skill">
         {skillsData.map((skill) => (
           <div key={skill.title} className="flex-1">
-            {/* Заголовок с линией */}
             <div className="relative">
               <h1 className="text-gray-700 text-[16px] font-bold pb-[18px]">
                 {skill.title}
