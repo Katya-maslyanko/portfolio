@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>Екатерина Маслянко - Портфолио</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Портфолио Екатерины Масоянко - UX/UI дизайнер и веб-разработчик" />
+        <meta name="description" content="Портфолио Екатерины Маслянко - UX/UI дизайнер и веб-разработчик" />
       </head>
       <body className={manrope.className}>
         <CustomCursor />
