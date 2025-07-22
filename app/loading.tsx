@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 export default function Loading({ isLoading, setIsLoading }: { isLoading: boolean; setIsLoading?: (value: boolean) => void }) {
   const [displayText, setDisplayText] = useState('');
@@ -47,18 +48,17 @@ export default function Loading({ isLoading, setIsLoading }: { isLoading: boolea
     return () => clearInterval(cursorInterval);
   }, [setIsLoading]);
 
-const loaderVariants = {
-  initial: { opacity: 1, y: 0 }, // y как число
-  exit: { 
-    opacity: 0, 
-    y: -100, // y как число, без 'vh'
-    transition: { 
-      duration: 1, 
-      ease: [0.42, 0, 0.58, 1] // Убедитесь, что это корректный массив easing
-    } 
-  },
-};
-
+   const loaderVariants: Variants = {
+     initial: { opacity: 1, y: 0 },
+     exit: { 
+       opacity: 0, 
+       y: -100, 
+       transition: { 
+         duration: 1, 
+         ease: [0.42, 0, 0.58, 1] 
+       } 
+     },
+   };
 
   return (
     <AnimatePresence>
