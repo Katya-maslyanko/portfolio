@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 interface SidebarProps {
   className?: string;
@@ -51,12 +52,14 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
                 )
               }
             >
-              <img
+              <Image
                 src={isHovered ? "/icons/logo_quite_hover.svg" : "/icons/logo_quite.svg"}
                 alt="Logo"
                 className="w-6 h-6 mr-2"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                width={24} // Задайте ширину в пикселях
+                height={24} // Задайте высоту в пикселях
               />
             </div>
           </div>
