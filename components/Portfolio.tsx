@@ -265,7 +265,6 @@ const PortfolioGrid = () => {
         <div className="col_div col-span-3">
           <div
             className="h-[393px] h-image md:h-[216px] bg-gray-300 flex items-center justify-center relative overflow-hidden"
-            onClick={() => handleClick("project-4")}
           >
             <Image
               src="/img/projects.jpg"
