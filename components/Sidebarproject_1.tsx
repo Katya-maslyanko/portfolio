@@ -58,8 +58,8 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
                 className="w-6 h-6 mr-2"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                width={24} // Задайте ширину в пикселях
-                height={24} // Задайте высоту в пикселях
+                width={102} // Задайте ширину в пикселях
+                height={41} // Задайте высоту в пикселях
               />
             </div>
           </div>

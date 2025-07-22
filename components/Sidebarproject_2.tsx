@@ -58,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 width={150}
-                height={80}
+                height={50}
               />
             </div>
           </div>
