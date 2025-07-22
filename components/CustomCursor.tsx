@@ -7,33 +7,45 @@ export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [cursorColor, setCursorColor] = useState('#666666');
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Определяем, является ли устройство мобильным
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Проверяем при первом рендере
+    window.addEventListener('resize', handleResize); // Добавляем слушатель события изменения размера
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Убираем слушатель при размонтировании
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // Если мобильное устройство, не инициализируем курсор
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
     const handleMouseEnter = (e: Event) => {
       const target = e.target as HTMLElement;
-      console.log('MouseEnter:', target, 'Class:', target.className);
       const color = target.getAttribute('data-cursor-color') || '#8B8D7A';
       setCursorColor(color);
       if (target.closest('.cursor-grow')) {
-        console.log('Hover activated for cursor-grow');
         setIsHovering(true);
       }
     };
 
     const handleMouseLeave = () => {
-      console.log('MouseLeave');
       setCursorColor('#666666');
       setIsHovering(false);
     };
 
-    // Функция для регистрации событий
     const registerEvents = () => {
       const hoverElements = document.querySelectorAll('.cursor-grow');
-      console.log('Hover elements found:', hoverElements.length);
       hoverElements.forEach((el) => {
         el.addEventListener('mouseenter', handleMouseEnter);
         el.addEventListener('mouseleave', handleMouseLeave);
@@ -41,14 +53,11 @@ export default function CustomCursor() {
       return hoverElements;
     };
 
-    // Первичная регистрация с задержкой
     let hoverElements: NodeListOf<Element> = document.querySelectorAll('.cursor-grow');
     if (hoverElements.length === 0) {
-      console.log('No cursor-grow elements found initially, setting up observer');
       const observer = new MutationObserver(() => {
         hoverElements = document.querySelectorAll('.cursor-grow');
         if (hoverElements.length > 0) {
-          console.log('Found cursor-grow elements:', hoverElements.length);
           registerEvents();
           observer.disconnect();
         }
@@ -67,7 +76,7 @@ export default function CustomCursor() {
         el.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
-  }, []);
+  }, [isMobile]);
 
   const cursorVariants = {
     default: {
@@ -83,6 +92,8 @@ export default function CustomCursor() {
       opacity: 0.8,
     },
   };
+
+  if (isMobile) return null; // Не рендерим курсор на мобильных устройствах
 
   return (
     <motion.div
