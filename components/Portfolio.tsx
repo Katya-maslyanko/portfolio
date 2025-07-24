@@ -33,7 +33,7 @@ const PortfolioGrid = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="grid_project grid grid-cols-3 gap-[20px] md:gap-[4px]">
         <div
-          className="col_div col-span-2 h-64 md:h-[409px] bg-gray-300 flex items-center justify-center relative overflow-hidden cursor-pointer"
+          className="col_div col-span-2 h-64 md:h-[409px] bg-gray-300 flex items-center justify-center relative overflow-hidden cursor-grow"
           style={{ backgroundColor: "#E2E8F0" }}
           onClick={() => handleClick("/project/reo_system")}
           data-cursor-hover
@@ -63,7 +63,7 @@ const PortfolioGrid = () => {
           <div className="col_div mt-[8px]">
             <h1
               onClick={() => handleClick("/project/reo_system")}
-              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-pointer"
+              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-grow"
             >
               Система мониторинга полигонов для ППК «РЭО»
             </h1>
@@ -85,7 +85,7 @@ const PortfolioGrid = () => {
           <div>
             <h1
               onClick={() => handleClick("/project/quite_website")}
-              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-pointer"
+              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-grow"
             >
               Корпоративный сайт ГК «Тихие крылья»
             </h1>
@@ -119,7 +119,7 @@ const PortfolioGrid = () => {
                 onClick={() =>
                   window.open("https://stellular-queijadas.netlify.app/", "_blank")
                 }
-                className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-pointer"
+                className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-grow"
               >
                 Веб-приложение обработки изображения
               </h1>
@@ -178,7 +178,7 @@ const PortfolioGrid = () => {
                     "_blank"
                   )
                 }
-                className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-pointer"
+                className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-grow"
               >
                 Конкурентный анализ сайтов
               </h1>
@@ -199,7 +199,7 @@ const PortfolioGrid = () => {
 
         <div className="col_div col-span-2">
           <div
-            className="h-[216px] md:h-[393px] h-image bg-gray-300 flex items-center justify-center relative overflow-hidden cursor-pointer"
+            className="h-[216px] md:h-[393px] h-image bg-gray-300 flex items-center justify-center relative overflow-hidden cursor-grow"
             style={{ backgroundColor: "#000" }}
             onClick={() => handleClick("/project/quite_website")}
             data-cursor-hover
@@ -212,7 +212,7 @@ const PortfolioGrid = () => {
             />
           </div>
           <div
-            className="mt-5 h-64 md:h-[339px] mt_pr bg-gray-300 flex items-center justify-center cursor-pointer"
+            className="mt-5 h-64 md:h-[339px] mt_pr bg-gray-300 flex items-center justify-center cursor-grow"
             style={{ backgroundColor: "#E2E8F0" }}
             onClick={() => handleClick("/project/task_manager")}
             data-cursor-hover
@@ -230,7 +230,7 @@ const PortfolioGrid = () => {
           <div className="mt-[8px]">
             <h1
               onClick={() => handleClick("/project/task_manager")}
-              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-pointer"
+              className="mb-[4px] text-gray-700 text-[16px] hover:text-[#4C4FFF] transition-colors duration-300 cursor-grow"
             >
               Веб-приложение управления проектами для оценки эффективности сотрудников
             </h1>

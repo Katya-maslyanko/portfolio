@@ -54,25 +54,25 @@ const Facts = () => {
                   <span className="ml-[4px] text-gray-700 text-[16px] group-hover:text-[#4C4FFF]">
                     Владею современным стеком
                     <span className="box-sizing px-[4px]">
-                      <span className="inline-block border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block border border-gray-300 rounded-[8px] px-[6px] text-[15px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         Next
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         React + TypeScript
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         Vue 
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         HTML с БЭМ
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         CSS/SCSS
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         JavaScript
                       </span>
-                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] px-[6px] py-[1.5px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
+                      <span className="inline-block ml-[4px] border border-gray-300 rounded-[8px] text-[15px] px-[6px] mx-1 hover:bg-[#4C4FFF] hover:text-[#FFFFFF] hover:border-[#4C4FFF] transition-all duration-300">
                         Django + DRF
                       </span>
                     </span>
@@ -81,7 +81,7 @@ const Facts = () => {
                 </div>
               </div>
               <span
-                className="block w-full h-[0.5px] bg-gray-300"
+                className="block w-full h-[1px] bg-gray-300" // Увеличена высота линии
                 style={{ backgroundColor: "#A2A2A2" }}
               />
             </li>

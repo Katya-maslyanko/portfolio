@@ -60,6 +60,7 @@ body {
   line-height: 22.5px;
   letter-spacing: -0.141px;
   color: #000;
+  cursor: none;
 }
 
 aside li {
@@ -302,6 +303,10 @@ p {
   flex-direction: column;
 }
 
+.loading-div{
+  cursor: none;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
@@ -319,6 +324,9 @@ p {
   }
   .sidebar  span {
     font-size: 13px;
+  }
+  .loading-div{
+    cursor: none;
   }
 }
 
@@ -411,7 +419,7 @@ p {
   }
 
   .skill p {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.4;
     margin-top: 6px;
   }

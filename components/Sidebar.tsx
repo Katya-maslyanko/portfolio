@@ -27,8 +27,8 @@ const Sidebar: React.FC<SidebarProps> = ({ className = "" }) => {
     //   className={`fixed top-0 left-0 w-[324px] h-screen text-[13px] text-black p-4 flex flex-col ${className}`}
     // >
       <aside
-  className={`fixed top-0 left-0 w-[324px] text-[13px] text-black p-4 flex flex-col screen ${className}`}
->
+        className={`fixed top-0 left-0 w-[324px] text-[13px] text-black p-4 flex flex-col screen ${className}`}
+      >
       <div className="mb-6">
         <div>
           <Link

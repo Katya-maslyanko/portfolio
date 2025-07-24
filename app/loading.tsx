@@ -64,20 +64,20 @@ export default function Loading({ isLoading, setIsLoading }: { isLoading: boolea
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 w-screen h-screen min-h-screen flex items-center justify-center bg-[#F5F5F5] z-[100]"
+          className="fixed inset-0 w-screen h-screen min-h-screen flex items-center justify-center bg-[#F5F5F5] z-[100] loading-div"
           variants={loaderVariants}
           initial="initial"
           exit="exit"
         >
           <div className="flex items-center justify-center">
             <motion.span
-              className="text-[3rem] md:text-[4rem] font-bold text-[#1A1A1A] font-manrope tracking-tight leading-none"
+              className="text-[4rem] md:text-[3rem] font-bold text-[#1A1A1A] font-manrope tracking-tight leading-none"
               animate={{ opacity: 1 }}
             >
               {displayText}
             </motion.span>
             <motion.span
-              className="text-[3rem] md:text-[4rem] font-bold text-[#1A1A1A] font-manrope leading-none"
+              className="text-[4rem] md:text-[3rem] font-bold text-[#1A1A1A] font-manrope leading-none"
               animate={{ opacity: showCursor ? 1 : 0 }}
               transition={{ duration: 0.1 }}
             >
