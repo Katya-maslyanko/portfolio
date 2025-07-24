@@ -8,7 +8,7 @@ export default function Headerproject() {
       <div className="py-4 flex justify-end items-end relative">
         <Link
           href="/"
-          className="text-[16px] text-black no-underline hover:no-underline font-[400] cursor-pointer pb-[18.5px] relative header-link"
+          className="text-[16px] text-black no-underline hover:no-underline font-[400] cursor-grow pb-[18.5px] relative header-link"
           data-cursor-hover
           style={{ color: "#000" }}
         >

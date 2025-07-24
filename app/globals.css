@@ -149,46 +149,6 @@ p {
   transform-origin: left;
 }
 
-@keyframes expandCursor {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.8;
-    background-color: #4c4fff;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(50);
-    opacity: 0.6;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(100);
-    opacity: 0;
-  }
-}
-
-.custom-cursor {
-  transition: width 100ms ease-out, height 100ms ease-out;
-}
-
-.cursor-expand {
-  animation: cursorExpand 300ms forwards;
-}
-
-@keyframes cursorExpand {
-  0% {
-    width: 15px;
-    height: 15px;
-  }
-  50% {
-    width: 20px;
-    height: 20px;
-    opacity: 0.8;
-  }
-  100% {
-    width: 40px;
-    height: 40px;
-    opacity: 0;
-  }
-}
 
 .custom-cursor.cursor-hover {
   width: 40px;
